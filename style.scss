@@ -1,0 +1,223 @@
+$headwidth:250px;
+$beetweenEars: 280px;
+$hairWidth: 250px;
+@import url('https://fonts.googleapis.com/css2?family=Frijole&display=swap');
+*::before, *::after{
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    background-color: hsl(200,  50%,    12%);
+}
+.head{
+    background: rgb(247, 198, 175);
+    height: 300px;
+    width: $headwidth;
+    border-radius: 70% 70%  100%    100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.eyes, .brows {
+width: 190px;
+display: flex;
+justify-content: space-between;
+position: absolute;
+margin-bottom: 19px;
+// top: 20px;
+}
+.eye{
+    background: white;
+    height: 15px;
+    width: 60px;
+    margin: -7px;
+    border-radius: 100%;
+    border-top: 3px solid hsl(19,   47%,68%);
+    border-bottom: 5px solid hsl(19,   47%,68%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    
+}
+.eye::before{
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 31px;
+    background: rgb(133, 91, 13);
+    border-radius: 100%;
+}
+.eye::after{
+    content: "";
+    width: 15px;
+    height: 15px;
+    background-color: #333;
+    position: absolute;
+    border-radius: 100%;
+    margin-left: 15px;
+    margin-bottom: 7px;
+}
+.brow{
+    width: 65px;
+    //thickness of eye brows
+    height: 22px;
+    border-top: 8px solid hsl(27, 33%,28%);
+    border-radius: 100%;
+    margin-bottom: 22px;
+    filter: blur(1px);
+}
+.nose{
+    position: absolute;
+    border: 4px solid hsl(19, 46%,68%);
+    width: 40px;
+    height: 30px;
+    border-radius: 0    0   100% 100%;
+    border-top: none;
+    //position of nose
+    margin-top: 50px;
+}
+.mouth{
+    position: absolute;
+    width: 100px;
+    height: 50px;
+    background: white;
+    margin-top: 200px;
+    border-radius: 20%    20%   100% 100%;
+    border: 4px solid hsl(19, 46%,68%);
+    border-right-width: 1px;
+    border-left-width: 1px;
+    border-top-width:   2px;
+}
+.ears{
+width: $beetweenEars;
+position: absolute;
+display: flex;
+justify-content: space-between;
+}
+.ear{
+    width: 15px;
+    z-index: -1;
+    height: 50px;
+    background:hsl(22,   47%,68%);
+    border: 2px solid hsl(22,   77%,68%);
+    border-radius: 0 100% 100% 0;
+}
+.ear:first-child{
+    border-radius: 100% 0   0   100%;
+}
+.hair{
+    position: absolute;
+    width: $hairWidth;
+    height: 95px;
+    background-color: hsl(27, 33%,28%);
+    margin-bottom: 250px;
+    border-radius: 100% 70%  0  0;
+    border-bottom-left-radius: 70%;
+}
+.hair::before,
+.hair::after{
+    content: "";
+    position: absolute;
+    background-color: hsl(27, 33%,28%);
+    height: 100px;
+    width: 10px;
+    transform: translateY(67%);
+    // transform: rotate(45deg);
+}
+.hair::after{
+    right: 0px;
+}
+.hair-corner{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    // background: forestgreen;
+}
+.hair-corner::before,
+.hair-corner::after{
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 90px;
+    background-color: hsl(27, 33%,28%);
+    transform: rotate(15deg);
+    top: 68px;
+    left: 0px;
+    
+}
+.hair-corner::after{
+    left: initial;
+    right: 1px;
+    transform: rotate(-18deg);
+}
+//signature
+h1{
+    font-family: 'Frijole', cursive;
+    position: absolute;
+    font-size: 16px;
+    bottom: 5%;
+    left: 5%;
+}
+//text
+.title-word {
+    animation: color-animation 4s linear infinite;
+}
+
+.title-word-1 {
+  --color-1: #DF8453;
+  --color-2: #3D8DAE;
+  --color-3: #E4A9A8;
+}
+
+.title-word-2 {
+  --color-1: #DBAD4A;
+  --color-2: #ACCFCB;
+  --color-3: #17494D;
+}
+
+.title-word-3 {
+  --color-1: #ACCFCB;
+  --color-2: #E4A9A8;
+  --color-3: #ACCFCB;
+}
+
+.title-word-4 {
+  --color-1: #3D8DAE;
+  --color-2: #DF8453;
+  --color-3: #E4A9A8;
+}
+
+@keyframes color-animation {
+  0%    {color: var(--color-1)}
+  32%   {color: var(--color-1)}
+  33%   {color: var(--color-2)}
+  65%   {color: var(--color-2)}
+  66%   {color: var(--color-3)}
+  99%   {color: var(--color-3)}
+  100%  {color: var(--color-1)}
+}
+
+/* Here are just some visual styles. 🖌 */
+
+.container {
+    margin-left: 5%;
+  display: grid;
+  place-items: right;  
+  text-align: center;
+  max-width: 20vw;
+  height: 20vh
+}
+
+.title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size: 2.8vw;
+  text-transform: uppercase;
+}

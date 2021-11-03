@@ -1,0 +1,303 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Frijole&display=swap");
+*::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  background-color: #0f242e;
+}
+
+.head {
+  background: #f7c6af;
+  height: 300px;
+  width: 250px;
+  border-radius: 70% 70%  100%    100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.eyes, .brows {
+  width: 190px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: absolute;
+  margin-bottom: 19px;
+}
+
+.eye {
+  background: white;
+  height: 15px;
+  width: 60px;
+  margin: -7px;
+  border-radius: 100%;
+  border-top: 3px solid #d49f87;
+  border-bottom: 5px solid #d49f87;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.eye::before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 31px;
+  background: #855b0d;
+  border-radius: 100%;
+}
+
+.eye::after {
+  content: "";
+  width: 15px;
+  height: 15px;
+  background-color: #333;
+  position: absolute;
+  border-radius: 100%;
+  margin-left: 15px;
+  margin-bottom: 7px;
+}
+
+.brow {
+  width: 65px;
+  height: 22px;
+  border-top: 8px solid #5f4530;
+  border-radius: 100%;
+  margin-bottom: 22px;
+  -webkit-filter: blur(1px);
+          filter: blur(1px);
+}
+
+.nose {
+  position: absolute;
+  border: 4px solid #d3a088;
+  width: 40px;
+  height: 30px;
+  border-radius: 0    0   100% 100%;
+  border-top: none;
+  margin-top: 50px;
+}
+
+.mouth {
+  position: absolute;
+  width: 100px;
+  height: 50px;
+  background: white;
+  margin-top: 200px;
+  border-radius: 20%    20%   100% 100%;
+  border: 4px solid #d3a088;
+  border-right-width: 1px;
+  border-left-width: 1px;
+  border-top-width: 2px;
+}
+
+.ears {
+  width: 280px;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.ear {
+  width: 15px;
+  z-index: -1;
+  height: 50px;
+  background: #d4a387;
+  border: 2px solid #ec9d6f;
+  border-radius: 0 100% 100% 0;
+}
+
+.ear:first-child {
+  border-radius: 100% 0   0   100%;
+}
+
+.hair {
+  position: absolute;
+  width: 250px;
+  height: 95px;
+  background-color: #5f4530;
+  margin-bottom: 250px;
+  border-radius: 100% 70%  0  0;
+  border-bottom-left-radius: 70%;
+}
+
+.hair::before,
+.hair::after {
+  content: "";
+  position: absolute;
+  background-color: #5f4530;
+  height: 100px;
+  width: 10px;
+  -webkit-transform: translateY(67%);
+          transform: translateY(67%);
+}
+
+.hair::after {
+  right: 0px;
+}
+
+.hair-corner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.hair-corner::before,
+.hair-corner::after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 90px;
+  background-color: #5f4530;
+  -webkit-transform: rotate(15deg);
+          transform: rotate(15deg);
+  top: 68px;
+  left: 0px;
+}
+
+.hair-corner::after {
+  left: initial;
+  right: 1px;
+  -webkit-transform: rotate(-18deg);
+          transform: rotate(-18deg);
+}
+
+h1 {
+  font-family: 'Frijole', cursive;
+  position: absolute;
+  font-size: 16px;
+  bottom: 5%;
+  left: 5%;
+}
+
+.title-word {
+  -webkit-animation: color-animation 4s linear infinite;
+          animation: color-animation 4s linear infinite;
+}
+
+.title-word-1 {
+  --color-1: #DF8453;
+  --color-2: #3D8DAE;
+  --color-3: #E4A9A8;
+}
+
+.title-word-2 {
+  --color-1: #DBAD4A;
+  --color-2: #ACCFCB;
+  --color-3: #17494D;
+}
+
+.title-word-3 {
+  --color-1: #ACCFCB;
+  --color-2: #E4A9A8;
+  --color-3: #ACCFCB;
+}
+
+.title-word-4 {
+  --color-1: #3D8DAE;
+  --color-2: #DF8453;
+  --color-3: #E4A9A8;
+}
+
+@-webkit-keyframes color-animation {
+  0% {
+    color: var(--color-1);
+  }
+  32% {
+    color: var(--color-1);
+  }
+  33% {
+    color: var(--color-2);
+  }
+  65% {
+    color: var(--color-2);
+  }
+  66% {
+    color: var(--color-3);
+  }
+  99% {
+    color: var(--color-3);
+  }
+  100% {
+    color: var(--color-1);
+  }
+}
+
+@keyframes color-animation {
+  0% {
+    color: var(--color-1);
+  }
+  32% {
+    color: var(--color-1);
+  }
+  33% {
+    color: var(--color-2);
+  }
+  65% {
+    color: var(--color-2);
+  }
+  66% {
+    color: var(--color-3);
+  }
+  99% {
+    color: var(--color-3);
+  }
+  100% {
+    color: var(--color-1);
+  }
+}
+
+/* Here are just some visual styles. 🖌 */
+.container {
+  margin-left: 5%;
+  display: -ms-grid;
+  display: grid;
+  place-items: right;
+  text-align: center;
+  max-width: 20vw;
+  height: 20vh;
+}
+
+.title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size: 2.8vw;
+  text-transform: uppercase;
+}
+/*# sourceMappingURL=style.css.map */
