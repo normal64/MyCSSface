@@ -1,6 +1,7 @@
 $headwidth:250px;
 $beetweenEars: 280px;
 $hairWidth: 250px;
+@import url('https://fonts.googleapis.com/css2?family=Frijole&family=Indie+Flower&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Frijole&display=swap');
 *::before, *::after{
     box-sizing: border-box;
@@ -161,9 +162,9 @@ justify-content: space-between;
 h1{
     font-family: 'Frijole', cursive;
     position: absolute;
-    font-size: 16px;
-    bottom: 5%;
-    left: 5%;
+    font-size: 10px;
+    bottom: 1%;
+    left: 2%;
 }
 //text
 .title-word {
@@ -220,4 +221,16 @@ h1{
   font-weight: 800;
   font-size: 2.8vw;
   text-transform: uppercase;
+}
+.bgtext{
+    font-family: 'Indie Flower', cursive;
+    font-size: 40px;
+    word-spacing: 40px;
+    opacity: 0.3;
+    transform: rotate(-14deg);
+}
+.bgtext-container{
+    position: absolute;
+    top: 5px; 
+    left: 1%;
 }
