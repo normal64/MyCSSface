@@ -105,8 +105,8 @@ body {
   position: absolute;
   border: 4px solid #d3a088;
   width: 40px;
-  height: 30px;
-  border-radius: 0    0   100% 100%;
+  height: 40px;
+  border-radius: 0    0   40% 40%;
   border-top: none;
   margin-top: 50px;
 }
@@ -164,12 +164,13 @@ body {
   position: absolute;
   background-color: #5f4530;
   height: 100px;
-  width: 10px;
-  -webkit-transform: translateY(67%);
-          transform: translateY(67%);
+  width: 11px;
+  -webkit-transform: translateY(66%);
+          transform: translateY(66%);
 }
 
 .hair::after {
+  top: 10px;
   right: 0px;
 }
 
@@ -197,6 +198,25 @@ body {
   right: 1px;
   -webkit-transform: rotate(-18deg);
           transform: rotate(-18deg);
+}
+
+.hair-front, .hair-front-2, .hair-front-3 {
+  height: 40px;
+  width: 10px;
+  background: #5f4530;
+  -webkit-transform: rotate(115deg);
+          transform: rotate(115deg);
+  position: absolute;
+  left: 83%;
+  top: 80%;
+}
+
+.hair-front-2 {
+  left: 76%;
+}
+
+.hair-front-3 {
+  left: 72%;
 }
 
 h1 {

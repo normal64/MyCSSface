@@ -78,8 +78,8 @@ margin-bottom: 19px;
     position: absolute;
     border: 4px solid hsl(19, 46%,68%);
     width: 40px;
-    height: 30px;
-    border-radius: 0    0   100% 100%;
+    height: 40px;
+    border-radius: 0    0   40% 40%;
     border-top: none;
     //position of nose
     margin-top: 50px;
@@ -128,11 +128,12 @@ justify-content: space-between;
     position: absolute;
     background-color: hsl(27, 33%,28%);
     height: 100px;
-    width: 10px;
-    transform: translateY(67%);
+    width: 11px;
+    transform: translateY(66%);
     // transform: rotate(45deg);
 }
 .hair::after{
+    top: 10px;
     right: 0px;
 }
 .hair-corner{
@@ -157,6 +158,23 @@ justify-content: space-between;
     left: initial;
     right: 1px;
     transform: rotate(-18deg);
+}
+.hair-front{
+    height: 40px;
+    width: 10px;
+    background: hsl(27, 33%,28%);
+    transform: rotate(115deg);
+    position: absolute;
+    left: 83%;
+    top: 80%;
+}
+.hair-front-2{
+    @extend .hair-front;
+    left: 76%;
+}
+.hair-front-3{
+    @extend .hair-front;
+    left: 72%;
 }
 //signature
 h1{
